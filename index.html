@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Apisonadora</title>
+    </head>
+    
+    <body>
+        <button id="apisona">APISONA</button>
+        <br>
+        <img id="image" src=""/>
+
+        <script>
+            function nuevaApisonadora(event){
+                event.preventDefault();
+                let image = document.getElementById("image");
+
+                let chosenImage = Math.ceil(Math.random() * 20)
+                let imagePath = `img/${chosenImage}.jpg`
+
+                image.src = imagePath;
+            }
+
+            const form = document.getElementById("apisona");
+            form.addEventListener("click", nuevaApisonadora);
+        </script>
+    </body>
+</html>
